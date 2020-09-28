@@ -6,10 +6,11 @@ import './index.css';
 // import { CounterCustomHook } from './components/01-use-state/CounterCustomHook';
 // import { SimpleForm } from './components/02-useEffect/SimpleForm';
 // import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook';
-import { MultipleCustomHooks } from './components/03-useFetch/MultipleCustomHooks';
+// import { MultipleCustomHooks } from './components/03-useFetch/MultipleCustomHooks';
+import { FocusScreen } from './components/04-useRef/FocusScreen';
 
 ReactDOM.render(
-    <MultipleCustomHooks />,
+    <FocusScreen />,
   document.getElementById('root')
 );
 

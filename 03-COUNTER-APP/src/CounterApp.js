@@ -1,38 +1,35 @@
-// RAFCP --> SNIPPER 
+// RAFCP --> SNIPPER
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+const CounterApp = ({ value }) => {
+  const [counter, setCounter] = useState(value);
 
-const CounterApp = ({ value = 10}) =>{
+  const handleAdd = () => setCounter((counter) => counter + 1);
 
-    const [ counter, setCounter] = useState(value);
+  const reset = () => setCounter(value);
 
-    const handleAdd = () => setCounter((counter) =>  counter + 1);
-    
+  const handleSubtract = () => setCounter((counter) => counter - 1);
 
-    const reset = () => setCounter( value);
-    
-    const handleSubtract = () => setCounter((counter) => counter - 1)
-    
+  return (
+    <>
+      <h1>Counter App</h1>
+      <h1 id="counter">{counter}</h1>
 
-    return (
-        <>
-            <h1>Counter App</h1>
-            <h1 id="counter">{counter}</h1>
-
-            <button onClick = { handleAdd } >+1</button>
-            <button onClick = {reset } >Reset</button>
-            <button onClick = {  handleSubtract }>-1</button>
-        </>
-    );
-}
-
+      <button onClick={handleAdd}>+1</button>
+      <button onClick={reset}>Reset</button>
+      <button onClick={handleSubtract}>-1</button>
+    </>
+  );
+};
 
 export default CounterApp;
 
 CounterApp.propTypes = {
-    value: PropTypes.number
-}
+  value: PropTypes.number,
+};
 
-
+CounterApp.defaultProps = {
+  value: 10,
+};

@@ -1,0 +1,8 @@
+.blockquote{
+  display: flex;
+}
+
+.rect{
+  background: whitesmoke;
+  padding: 1rem;
+}
